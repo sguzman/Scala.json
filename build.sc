@@ -85,7 +85,10 @@ object json extends ScalaModule {
   )
 
   /** Ivy dependencies */
-  //def ivyDeps = Agg()
+  def ivyDeps = Agg(
+    ivy"org.scala-graph::graph-core:1.12.3",
+    ivy"org.scala-graph::graph-dot:1.12.1"
+  )
 
   def forkArgs = Seq("-Xmx4g")
 }
